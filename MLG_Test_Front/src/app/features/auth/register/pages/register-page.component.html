@@ -1,0 +1,63 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+  <mat-card class="w-full max-w-md p-6">
+    <h2 class="text-xl font-semibold mb-4 text-center">Crear una cuenta</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" class="space-y-4">
+      <mat-form-field class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Apellido paterno</mat-label>
+        <input matInput formControlName="firstLastName" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Apellido materno</mat-label>
+        <input matInput formControlName="secondLastName" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="addressName" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Código Postal</mat-label>
+        <input matInput formControlName="postalCode" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Número Exterior</mat-label>
+        <input matInput formControlName="externalNumber" />
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Número Interior</mat-label>
+        <input matInput formControlName="internalNumber" />
+      </mat-form-field>
+
+      <div class="flex gap-4">
+        <button
+          mat-raised-button
+          class="w-full text-red-700!"
+          (click)="router.navigate(['/login'])"
+        >
+          Regresar
+        </button>
+        <button mat-raised-button color="primary" class="w-full" type="submit">Registrarse</button>
+      </div>
+    </form>
+  </mat-card>
+</div>

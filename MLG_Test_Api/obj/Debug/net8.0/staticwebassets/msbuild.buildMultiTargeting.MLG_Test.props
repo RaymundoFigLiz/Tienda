@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MLG_Test.props" />
+</Project>

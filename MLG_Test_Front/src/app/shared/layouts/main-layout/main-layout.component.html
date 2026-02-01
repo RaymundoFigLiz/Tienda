@@ -1,0 +1,59 @@
+<mat-sidenav-container class="h-screen">
+  <mat-sidenav mode="side" opened class="bg-gray-200! rounded-none!">
+    <div class="p-4 border-b border-gray-700">
+      @if (user()) {
+        <p class="text-sm text-gray-600">Usuario:</p>
+        <div class="flex">
+          <p class="font-semibold truncate">
+            {{ fullName() }}
+          </p>
+          <p class="font-semibold ml-auto">{{ getRoleDescription(user()?.roleId) }}</p>
+        </div>
+      }
+    </div>
+
+    <mat-nav-list>
+      @if (isAdministrator()) {
+        <a mat-list-item routerLink="/items" routerLinkActive="bg-gray-800">
+          <mat-icon>inventory</mat-icon>
+          <span class="ml-3">Artículos</span>
+        </a>
+        <a mat-list-item routerLink="/stores" routerLinkActive="bg-gray-800">
+          <mat-icon>store</mat-icon>
+          <span class="ml-3">Tiendas</span>
+        </a>
+        <a mat-list-item routerLink="/store-items" routerLinkActive="bg-gray-800">
+          <mat-icon>inventory_2</mat-icon>
+          <span class="ml-3">Articulos de Tienda</span>
+        </a>
+        <a mat-list-item routerLink="/sales" routerLinkActive="bg-gray-800">
+          <mat-icon>inventory_2</mat-icon>
+          <span class="ml-3">Historial de Ventas</span>
+        </a>
+      } @else {
+        <a mat-list-item routerLink="/shop" routerLinkActive="bg-gray-800">
+          <mat-icon>inventory_2</mat-icon>
+          <span class="ml-3">Comprar</span>
+        </a>
+      }
+    </mat-nav-list>
+
+    <div class="absolute bottom-0 w-full p-4">
+      <button
+        mat-stroked-button
+        color="warn"
+        class="w-full text-red-600! border-red-600!"
+        (click)="logout()"
+      >
+        <mat-icon>logout</mat-icon>
+        Cerrar Sesión
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="p-6">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

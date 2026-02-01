@@ -1,0 +1,22 @@
+<mat-card class="p-5">
+  <mat-card-title>Carrito</mat-card-title>
+
+  <mat-list>
+    @for (storeItem of storeItems; track $index) {
+      <mat-list-item>
+        <div class="flex gap-2 items-center">
+          <p>{{ storeItem.itemName }}</p>
+          <p>${{ storeItem.price }}</p>
+          <button mat-icon-button class="ml-auto" (click)="remove($index, storeItem)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-list-item>
+    }
+  </mat-list>
+  <div class="ml-auto text-2xl">Total: $ {{ total }}</div>
+  <div class="flex">
+    <button mat-button (click)="clear()">Vaciar</button>
+    <button mat-button class="ml-auto" (click)="buy()">Comprar</button>
+  </div>
+</mat-card>

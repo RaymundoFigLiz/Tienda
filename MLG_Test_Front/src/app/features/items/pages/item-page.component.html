@@ -1,0 +1,45 @@
+<div class="flex justify-between items-center mb-4">
+  <h2 class="text-xl font-semibold">Artículos</h2>
+
+  <button mat-raised-button color="primary" (click)="create()">
+    <mat-icon>add</mat-icon>
+    Nuevo
+  </button>
+</div>
+
+<div class="flex gap-4 flex-wrap">
+  @for (item of items(); track item.id) {
+    <mat-card class="h-80 w-80 flex flex-col rounded-2xl shadow-md overflow-hidden">
+      <mat-card-header>
+        <mat-card-title> {{ item.description }}</mat-card-title>
+      </mat-card-header>
+      @if (item.image) {
+        <div class="">
+          <img
+            mat-card-image
+            [src]="item.image"
+            [alt]="item.description"
+            class="w-full h-48 object-contain bg-gray-100"
+          />
+        </div>
+      } @else {
+        <div class="w-full h-48 object-contain bg-gray-100 flex items-center justify-center">
+          <mat-icon class="text-gray-400 text-6xl"> image </mat-icon>
+        </div>
+      }
+      <mat-card-content>
+        <p>
+          {{ item.code }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button matMiniFab (click)="edit(item)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="danger" (click)="delete(item)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  }
+</div>

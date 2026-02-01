@@ -1,0 +1,46 @@
+<section class="p-5">
+  <h2 mat-dialog-title>{{ data ? 'Editar' : 'Crear' }} Artículo</h2>
+
+  <form [formGroup]="form" class="p-4 space-y-4">
+    <div class="justify-center">
+      <div class="flex justify-between items-center">
+        <mat-label>Imagen</mat-label>
+        <input
+          type="file"
+          accept="image/*"
+          #fileInput
+          (change)="onFileSelected($event)"
+          formControlName="image"
+          class="hidden"
+        />
+
+        <button matButton color="primary" type="button" (click)="fileInput.click()">
+          Seleccionar imagen
+        </button>
+      </div>
+      <div class="flex justify-center mt-2">
+        @if (imagePreview()) {
+          <img [src]="imagePreview()" class="w-40 h-40 object-cover rounded-lg" />
+        } @else {
+          <div class="w-40 h-40 rounded-lg bg-gray-300 flex items-center justify-center">
+            <mat-icon class="text-gray-400 text-6xl"> image </mat-icon>
+          </div>
+        }
+      </div>
+    </div>
+    <mat-form-field class="w-full">
+      <mat-label>Codigo</mat-label>
+      <input matInput formControlName="code" />
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Descripción</mat-label>
+      <input matInput formControlName="description" />
+    </mat-form-field>
+
+    <div class="flex justify-end gap-2">
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+    </div>
+  </form>
+</section>

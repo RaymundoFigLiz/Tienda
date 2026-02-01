@@ -1,0 +1,54 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-200">
+  <mat-card class="w-full max-w-sm p-6">
+    <h2 class="text-2xl font-semibold text-center mb-6">Iniciar sesión</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" class="flex flex-col gap-4">
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        @if (form.controls.email.invalid) {
+          <mat-error>Email inválido</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" />
+        @if (form.controls.password.invalid) {
+          <mat-error>La contraseña es requerida</mat-error>
+        }
+      </mat-form-field>
+
+      <div class="text-center">
+        <span class="text-sm text-gray-600"> ¿No tienes cuenta? </span>
+
+        <a
+          routerLink="/register"
+          class="text-sm font-medium text-blue-800 hover:underline ml-1 cursor-pointer"
+        >
+          Regístrate
+        </a>
+      </div>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="w-full h-11 flex items-center justify-center"
+        [disabled]="loading"
+      >
+        @if (!loading) {
+          Entrar
+        } @else {
+          <mat-spinner diameter="20"></mat-spinner>
+        }
+      </button>
+
+      @if (error) {
+        <p class="text-red-600 text-sm text-center mt-2">
+          {{ error }}
+        </p>
+      }
+    </form>
+  </mat-card>
+</div>

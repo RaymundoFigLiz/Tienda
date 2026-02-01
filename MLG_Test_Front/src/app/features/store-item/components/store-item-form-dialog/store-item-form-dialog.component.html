@@ -1,0 +1,38 @@
+<section class="p-5">
+  <h2 mat-dialog-title>{{ data ? 'Editar' : 'Crear' }} Articulo de Tienda</h2>
+
+  <form [formGroup]="form" class="p-4 space-y-4">
+    <mat-form-field class="w-full">
+      <mat-label>Tienda</mat-label>
+      <mat-select formControlName="storeId" required>
+        @for (store of stores(); track store) {
+          <mat-option [value]="store.id">{{ store.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Artículo</mat-label>
+      <mat-select formControlName="itemId" required>
+        @for (item of items(); track item) {
+          <mat-option [value]="item.id">{{ item.description }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Precio</mat-label>
+      <input matInput formControlName="price" />
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Cantidad Disponible</mat-label>
+      <input matInput formControlName="stock" />
+    </mat-form-field>
+
+    <div class="flex justify-end gap-2">
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+    </div>
+  </form>
+</section>
