@@ -59,12 +59,12 @@ El objetivo de esta prueba es demostrar _criterio técnico, arquitectura y buena
 
 - Inicio de sesión
 <p>
-  <img src="public/login.png" width="600" />
+  <img src="MLG_Test_Front/public/login.png" width="600" />
 </p>
 
 - Registro de clientes
 <p>
-  <img src="public/registro.png" width="600" />
+  <img src="MLG_Test_Front/public/registro.png" width="600" />
 </p>
 
 ## Funcionalidad de Administración
@@ -79,40 +79,40 @@ CONTRASEÑA: admin123
 - Registro de clientes
 - Administración de Articulos
 <p>
-  <img src="public/admin-articulos.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-articulos.png" width="600" />
 </p>
 <p>
-  <img src="public/admin-articulos-crear.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-articulos-crear.png" width="600" />
 </p>
 <p>
-  <img src="public/admin-articulos-editar.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-articulos-editar.png" width="600" />
 </p>
 
 - Administración de Tiendas
 <p>
-  <img src="public/admin-tiendas.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-tiendas.png" width="600" />
 </p>
 <p>
-  <img src="public/admin-tiendas-crear.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-tiendas-crear.png" width="600" />
 </p>
 <p>
-  <img src="public/admin-tiendas-editar.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-tiendas-editar.png" width="600" />
 </p>
 
 - Administración de Articulos vendidos por Tienda
 <p>
-  <img src="public/admin-articulos-tienda.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-articulos-tienda.png" width="600" />
 </p>
 <p>
-  <img src="public/admin-articulos-tienda-crear.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-articulos-tienda-crear.png" width="600" />
 </p>
 <p>
-  <img src="public/admin-articulos-tienda-editar.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-articulos-tienda-editar.png" width="600" />
 </p>
 
 - Visualización de Ventas
 <p>
-  <img src="public/admin-ventas.png" width="600" />
+  <img src="MLG_Test_Front/public/admin-ventas.png" width="600" />
 </p>
 
 ## Funcionalidad de Cliente
@@ -121,7 +121,7 @@ Pantallas visibles unicamente para usuarios con rol de Cliente
 
 - Comprar Articulos de Tiendas
 <p>
-  <img src="public/cliente-comprar.png" width="600" />
+  <img src="MLG_Test_Front/public/cliente-comprar.png" width="600" />
 </p>
 
 ## Alcance y Decisiones Técnicas
