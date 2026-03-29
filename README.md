@@ -4,8 +4,6 @@
 
 Aplicación _Full Stack .NET (Angular 21 y .NET 8)_ para la gestión de una tienda, que permite administrar _artículos, tiendas, clientes_ y _compras_, incluyendo autenticación y un flujo básico de venta con carrito.
 
-El objetivo de esta prueba es demostrar _criterio técnico, arquitectura y buenas prácticas_, priorizando funcionalidad y claridad sobre alcance completo.
-
 ---
 
 ## Stack Tecnológico
