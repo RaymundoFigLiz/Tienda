@@ -1,4 +1,4 @@
-# Prueba Técnica – Sistema de Tienda
+# Tienda
 
 ## Descripción
 
