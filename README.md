@@ -1,5 +1,3 @@
-# Tienda
-
 ## Descripción
 
 Aplicación _Full Stack .NET (Angular 21 y .NET 8)_ para la gestión de una tienda, que permite administrar _artículos, tiendas, clientes_ y _compras_, incluyendo autenticación y un flujo básico de venta con carrito.
